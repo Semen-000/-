@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import ttk, simpledialog
 import time
 
-
 class Tamagotchi:
     def __init__(self, name, species):
         self.name = name
@@ -45,7 +44,6 @@ class Tamagotchi:
     def get_mood(self):
         h = self.stats["happiness"]
         return "😄" if h >= 85 else "😊" if h >= 65 else "😐" if h >= 40 else "😢" if h >= 20 else "😭"
-
 
 class App(tk.Tk):
     def __init__(self):
@@ -185,7 +183,6 @@ class App(tk.Tk):
         tk.Button(self, text="🚪 Выйти", command=self.quit, bg="#e74c3c", fg="white",
                   width=15, height=1, font=("Arial", 11, "bold"), bd=0,
                   activebackground="#c0392b").pack()
-
 
 if __name__ == "__main__":
     app = App()
